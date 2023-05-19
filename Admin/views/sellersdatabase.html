@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Sellers Database</title>
+</head>
+<body>
+
+<div>
+  <form>
+   <input type="search" name="search" id="search" placeholder="search" onkeyup="searchSellers()">
+  </form>
+ </div>
+
+ <div id="load-sellers">
+
+ </div>
+ <script>
+ window.addEventListener('load', (event) =>
+ {
+  $requestData = 'data';
+  
+  let xhttp = new XMLHttpRequest();
+  xhttp.open('POST', '../controller/viewsellers.php', true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send('data='+$requestData);
+  
+  xhttp.onreadystatechange = function()
+  {
+   if(this.readyState == 4 && this.status == 200)
+   {
+    document.getElementById("load-sellers").innerHTML = this.responseText;
+   }
+  }
+ });
+
+function searchSellers()
+{
+ let search = document.getElementById('search').value;
+ let xhttp = new XMLHttpRequest();
+
+xhttp.open('POST', '../controller/searchsellers.php', true);
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send('name=' + search);
+xhttp.onreadystatechange = function()
+{
+ if (this.readyState == 4 && this.status == 200)
+ {
+  document.getElementById("load-sellers").innerHTML = this.responseText;
+ }
+}
+}
+
+</script>
+<script src="../views/js/support.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+<head>
+ <title>Gameoholic</title>
+ <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+ <div class="container">
+  <form class="form" id="form" action="../controller/updateprofile.php"  method="post">
+    <header>
+      <a href="home.html" class="logo">HOME</a>
+    </header>
+   <h1>Profile</h1>
+   <div class="form-control">
+    <label for="fullname">Full Name</label>
+    <input type="text" name="fullname" id="fullname" placeholder="Your Full Name Here">
+    <span id="fullname error"> </span>
+   </div>
+   <div class="form-control">
+    <label for="username">User Name</label>
+    <input type="text" name="username" id="username" placeholder="Your User Name Here">
+    <span id="username error"> </span>
+   </div>
+   <div class="form-control">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="Your Email Here">
+    <span id="email error"> </span>
+   </div>
+   <div class="form-control">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Your Password Here">
+    <span id="password error"> </span>
+   </div>
+   <div class="form-control">
+    <label for="confirmpassword">Confirm Password</label>
+    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Your Confirm Password Here">
+    <span id="confirmpassword error"> </span>
+   </div>
+   <div class="form-control">
+    <label for="dateofbirth">Date Of Birth</label>
+    <input type="date" id="dateofbirth" name="dateofbirth" placeholder="Your Date Of Birth Here">
+    <span id="dateofbirth error"> </span>
+   </div>
+   <div class="form-control">
+  <a href="adminsdatabase.html">SEE ADMINS DATABASE HERE</a>
+ </div>
+   <button type="submit" name="submit">Update Profile</button>
+   <a href="delete.html">Delete Profile</a>
+  </form>
+ </div>
+
+ <script>
+   window.addEventListener('load', (event) =>
+{
+ $requestData = 'data';
+ 
+ let xhttp = new XMLHttpRequest();
+ xhttp.open('POST', '../controller/viewprofile.php', true);
+ xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+ xhttp.send('data='+$requestData);
+ 
+ xhttp.onreadystatechange = function()
+ {
+  if(this.readyState == 4 && this.status == 200)
+  {
+   let obj = JSON.parse(this.responseText);
+   document.getElementById("fullname").value = obj.fullname;
+   document.getElementById("username").value = obj.username;
+   document.getElementById("email").value = obj.email;
+   document.getElementById("password").value = obj.password;
+   document.getElementById("confirmpassword").value = obj.confirmpassword;
+   document.getElementById("dateofbirth").value = obj.dateofbirth;
+  }
+ }
+});
+ </script>
+ <script src="js/support.js"></script>
+</body>
+</html>

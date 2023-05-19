@@ -1,0 +1,56 @@
+<html>
+
+<head>
+ <title>Gameoholic</title>
+ <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+ <div class="container">
+  <form class="form" id="form" action="../controller/buyerscheck.php" onsubmit="return buyersValidation()" method="post">
+   <header>
+      <a href="home.html" class="logo">HOME</a>
+    </header>
+   <h1>Add Buyer</h1>
+   <div class="form-control">
+    <label for="fullname">Full Name</label>
+    <input type="text" name="fullname" id="fullname" placeholder="Your Full Name Here">
+    <span id="fullname error"> </span>
+   </div>
+   <div class="form-control">
+    <label for="username">User Name</label>
+    <input type="text" name="username" id="username" oninput="checkUserName()" placeholder="Your User Name Here">
+    <span id="username error"> </span>
+   </div>
+   <div class="form-control">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="Your Email Here">
+    <span id="email error"> </span>
+   </div>
+   <div class="form-control">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Your Password Here">
+    <span id="password error"> </span>
+   </div>
+   <div class="form-control">
+    <label for="confirmpassword">Confirm Password</label>
+    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Your Confirm Password Here">
+    <span id="confirmpassword error"> </span>
+   </div>
+   <div class="form-control">
+    <label for="dateofbirth">Date Of Birth</label>
+    <input type="date" id="dateofbirth" name="dateofbirth" placeholder="Your Date Of Birth Here">
+    <span id="dateofbirth error"> </span>
+   </div>
+   <div>
+    <a href="buyersdatabase.html">SEE BUYERS DATABASE HERE</a>
+   </div>
+   <button type="submit" name="submit" value="submit">Submit</button>
+  </form>
+ </div>
+ <script src="../views/js/signup.js"></script>
+ <script src="../views/js/support.js"></script>
+ <script src="../views/js/jquery-3.6.0.js"></script>
+</body>
+
+</html>

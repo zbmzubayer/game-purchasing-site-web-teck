@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Registration</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+
+		
+    <nav>
+     <ul>
+    <li> <a href="mainpage.html" class="main-btn"><b>Main</b></a></li>
+    
+    </nav>
+	<br>
+	
+	
+    <div class="container">  
+
+	<form method="post" action="../controller/registrationCheck.php">
+		
+        <h1 class="text">REGISTRATION</h1>
+        <br>
+        <br>
+
+        <div class="form-control">
+		<label for="username">USER NAME</label>
+		<input type="text" name="username" value="" placeholder="username here">
+        </div>		
+		
+        <div class="form-control">
+		<label for="password">PASSWORD</label>
+		<input type="password" name="password" value="" placeholder="password here">
+        </div>		
+		
+        <div class="form-control">
+		<label for="email">EMAIL</label>
+		<input type="email" name="email" value="" placeholder="email here">
+    </div>		
+				
+					
+		<button type="submit" name="submit" value="">SUBMIT</button>
+				
+			
+        <p class="text color" >Already have an account? then <b>log in</b>  </p>
+           
+        <button type="submit" name="login" value="">LOG IN</button> 
+            
+		
+	</form>
+    </div>
+    <script type="text/javascript" src="js/registrationjs.js"></script>
+</body>
+</html>

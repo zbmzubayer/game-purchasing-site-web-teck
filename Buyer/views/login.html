@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steam - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body>
+    <header id="header">
+        <div class="brand-logo">
+            <a href="index.html">
+                <img src="../assets/images/Steam_icon_logo.svg.png" alt="Steam">
+            </a>
+        </div>
+
+        <nav id="navbar">
+            <ul>
+                <li><a href="../index.php">Store</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+        <div class="log-reg">
+            <a href="registration.html">Registration</a>
+        </div>
+    </header>
+    <div class="form">
+        <form action="../controller/login-check.php" method="post">
+            <div>
+                <h1>Login</h1>
+            </div>
+            <div>
+                <label for="fusername">Username</label><span id="usernameError"></span>
+                <input type="text" name="username" id="fusername" value="" required />
+            </div>
+            <div>
+                <label for="fpassword">Password</label><span id="passwordError"></span>
+                <input type="password" name="password" id="fpassword" required />
+            </div>
+            <div>
+                <input type="checkbox" name="rememberme" value="true" id="fcheckbox">
+                <label for="fcheckbox">Remember me</label>
+            </div>
+            <button type="submit" name="submit" id="submitbtn">Sign In</button>
+            <div class="forgot-password">
+                <a href="forget-password.html">Forgot password?</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+<script src="js/jquery-3.6.0.js"></script>
+<script>
+    function ajax() {
+        let username = document.getElementById("fusername").value;
+        let password = document.getElementById("fpassword").value;
+
+        let json = {
+            'username': username,
+            'password': password
+        }
+
+        let myJson = JSON.stringify(json);
+
+        // let xhttp = new XMLHttpRequest();
+        // xhttp.open('POST', '../controller/login-ajax.php', true);
+        // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        // xhttp.send('data='+myJson);
+
+        // xhttp.onreadystatechange = function(){
+        // 	if(this.readyState == 4 && this.status == 200) {
+        // 		alert(this.responseText);
+        // 	}
+        // }
+
+        jQuery.ajax({
+            url: "../controller/login-ajax.php",
+            data: "data=" + myJson,
+            method: "POST",
+            success: function (data) {
+
+                if (data == "W") {
+                    $("#usernameError").html(data);
+
+                }
+                if (data == "R") {
+                    window.location = "home.php";
+                }
+
+            },
+            error: function () { }
+        });
+    }
+</script>
+
+</html>

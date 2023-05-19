@@ -1,0 +1,134 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+
+}
+ body{
+ 	background-color: #99A799; 
+ }
+ 
+ /*.menu {
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	width: 100%;
+ }*/
+ 
+.menu ul{
+	display: inline-flex;
+	margin: 50px;
+}
+.menu ul li{
+	list-style: none;
+	margin: 0 20px;
+	color: #b2b1b1;
+	cursor: pointer;
+}
+
+.Active{
+	color: #19dafa !important
+}
+.Profile-btn {
+	top: 40px;
+	right: 980px;
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid transparent;
+	border-radius: 20px;
+	background-image: linear-gradient(#FF5677,#FF5677),radial-gradient(circle at top left,#fd00da,#19d7f8);
+	background-origin: border-box;
+	background-clip: content-box,border-box;
+}
+.topselling-btn {
+	top: 40px;
+	right: 200px;
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid transparent;
+	border-radius: 20px;
+	background-image: linear-gradient(#FF5677,#FF5677),radial-gradient(circle at top left,#fd00da,#19d7f8);
+	background-origin: border-box;
+	background-clip: content-box,border-box;
+}
+.productInfo-btn {
+	top: 40px;
+	right: 400px;
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid transparent;
+	border-radius: 20px;
+	background-image: linear-gradient(#FF5677,#FF5677),radial-gradient(circle at top left,#fd00da,#19d7f8);
+	background-origin: border-box;
+	background-clip: content-box,border-box;
+}
+.pubgprofile-btn {
+	top: 40px;
+	right: 580px;
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid transparent;
+	border-radius: 20px;
+	background-image: linear-gradient(#FF5677,#FF5677),radial-gradient(circle at top left,#fd00da,#19d7f8);
+	background-origin: border-box;
+	background-clip: content-box,border-box;
+}
+.transaction-btn {
+	top: 40px;
+	right: 780px;
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid transparent;
+	border-radius: 20px;
+	background-image: linear-gradient(#FF5677,#FF5677),radial-gradient(circle at top left,#fd00da,#19d7f8);
+	background-origin: border-box;
+	background-clip: content-box,border-box;
+}
+.mainpage-btn {
+	top: 40px;
+	right: 1200px;
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid transparent;
+	border-radius: 20px;
+	background-image: linear-gradient(#FF5677,#FF5677),radial-gradient(circle at top left,#fd00da,#19d7f8);
+	background-origin: border-box;
+	background-clip: content-box,border-box;
+}
+.Profile-btn span{
+    display: block;
+    padding: 8px 22px;	
+}
+.topselling-btn span{
+    display: block;
+    padding: 8px 22px;	
+}
+.productInfo-btn span{
+    display: block;
+    padding: 8px 22px;	
+}
+.pubgprofile-btn span{
+    display: block;
+    padding: 8px 22px;	
+}
+.transaction-btn span{
+    display: block;
+    padding: 8px 22px;	
+}
+.mainpage-btn span{
+    display: block;
+    padding: 8px 22px;	
+}
+.pic{
+	height: 100%;
+	width: 100%;
+}
+
+
+

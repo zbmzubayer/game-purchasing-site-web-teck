@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+a {
+    text-decoration: none;
+}
+.search-nav {
+    height: 50px;
+    width: 65vw;
+    margin: 0 auto;
+
+}
+.search-nav input{
+    background: #32353C;
+    border-radius: 3px;
+    color: white;
+    padding: 8px 6px;
+
+    box-shadow: none;
+    border: none;
+    width: 50%;
+    transition: border ease-in-out .5s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+#search-btn {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#load-game {
+    width: 65vw;
+    height: 100%;
+    margin: 0 auto;
+    color: #c7d5e0;
+    font-size: 13px;
+    
+}
+table {
+    border-collapse: collapse;
+}
+thead {
+    background-color: #009DAE;;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+table td, th {
+    border: 2px solid rgba(26, 24, 24, 0.623);
+    padding: 8px;
+}
+table tr:hover {
+    background-color: #c7d5e0;
+    color: black;
+}
+table a {
+    text-decoration: none;
+    margin: 10px;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 25px;
+    background-color: #009DAE;
+    color: white;
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+    text-align: center;
+}
+table a:hover {
+    background-color: #426eff;
+    transition: all 0.3s ease;
+    color: black;
+}

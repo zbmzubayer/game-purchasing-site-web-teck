@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Gameoholic</title>
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+
+	
+ <div class="container">
+  <form class="form" id="form" action="../controller/logincheck.php" method="post">
+		<h1>Log In</h1>
+		<div class="form-control">
+			
+			<header>
+      <a href="../index.html" class="logo">INDEX</a>
+    </header>
+
+			<label for="username">User Name</label>
+			<input type="text" name="username" id="username" placeholder="Your User Name Here" required>
+			<span id="username error"> </span>
+		</div>
+		<div class="form-control">
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" placeholder="Your Password Here" required>
+			<span id="password error"> </span>
+		</div>
+		<div class="form-control">
+			<a href="signup.html">Don't have an account? Signup here</a>
+		</div>
+		<button type="submit" name="submit">Submit</button>
+	</form>
+	</div>
+	<script src="js/login.js"></script>
+	<script src="js/support.js"></script>
+</body>
+</html>

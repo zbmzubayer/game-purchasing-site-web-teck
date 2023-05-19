@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(to right, #1D2227, #1A283D);
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: none;
+    max-width: 100%;
+}
+.container {
+    height: 100%;
+    width: 65vw;
+    margin: 0 auto;
+    color: white;
+    /* background-color: #1D2024; */
+}
+.about-steam {
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 50px;
+}
+video {
+    object-fit: contain;
+    height: 350px;
+}
+.about-greeting {
+    width: 50%;
+    height: 100%;
+}
+.steam-logo {
+    height: 100px;
+    width: 200px;
+    
+}
+#steam-ico {
+    margin: 7px;
+}
+.about-subtitle {
+    height: 100px;
+    width: 100%;
+    font-size: 24px;
+}
+.install-steam {
+    margin-top: 25px;
+    width: 350px;
+    
+}
+.install-steam-btn a {
+    display: block;
+    text-transform: uppercase;
+    width: calc(100% - 75px);
+    padding: 15px 50px 15px 25px;
+    border-radius: 3px;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #fff;
+    position: relative;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    background: linear-gradient(to right, #06bfff 50%, #2b74ff 100%);
+    background-size: 200%;
+    background-position: right 0;
+    transition: background-position 300ms ease-in;
+}
+.install-steam-btn a i {
+    margin-left: 20px;
+} 
+.install-list {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 20px;
+    opacity: 0.80;
+    justify-content: end;
+}
+.about-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cta-title h2{
+    font-size: 45px;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+.cta-hero {
+    /* position: relative; */
+}

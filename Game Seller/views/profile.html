@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>Profile</title>
+    <link rel="stylesheet" href="Profile.css">
+</head>
+<body>
+	
+    <nav>
+     <ul>
+    <!-- <li> <a href="firstpage.html" class="main-btn"><b>Main</b></a></li>
+    <li><a href="registration.html" class="registration-btn"><b>Registration</b></a> </li> -->
+    </ul>
+    </nav>
+	<br>
+	
+	
+    <div class="container">  
+
+	<form method="post" action="">
+		
+        <h1 class="text">Profile</h1>
+        <br>
+        <br>
+
+        <div class="form-control">
+		<label for="username">USER NAME</label>
+		<input type="text" name="username" value="" placeholder="username here" id="username">
+        </div>		
+		
+        <div class="form-control">
+		<label for="password">PASSWORD</label>
+		<input type="password" name="password" value="" placeholder="password here" id="password">
+        </div>		
+		
+        <div class="form-control">
+		<label for="email">EMAIL</label>
+		<input type="email" name="email" value="" placeholder="email here" id="email">
+    </div>		
+				
+					
+		<button type="submit" name="submit" value="">Update</button>
+				
+			
+       <!--  <p class="text color" >Already have an account? then <b>log in</b>  </p>
+           
+        <button type="submit" name="login" value="">LOG IN</button> --> 
+            
+		
+	</form>
+    </div>
+    <script>
+   window.addEventListener('load', (event) =>
+{
+ $requestData = 'data';
+ 
+ let xhttp = new XMLHttpRequest();
+ xhttp.open('POST', '../controller/viewprofile.php', true);
+ xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+ xhttp.send('data='+$requestData);
+ 
+ xhttp.onreadystatechange = function()
+ {
+  if(this.readyState == 4 && this.status == 200)
+  {
+   let obj = JSON.parse(this.responseText);
+   document.getElementById("username").value = obj.username;
+   document.getElementById("password").value = obj.password;
+   document.getElementById("email").value = obj.email;
+   
+  }
+ }
+});
+ </script>
+   <!--  <script type="text/javascript" src="js/registrationjs.js"></script> -->
+</body>
+</html>

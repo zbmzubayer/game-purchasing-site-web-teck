@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/registration.css">
+    <title>Steam - Delete your account</title>
+</head>
+<body>
+    <div class="form">
+        <form action="../controller/delete-account.php" method="post" onsubmit="return validateRegistrationForm()">
+            <div>
+                <h1>Delete Account</h1>
+            </div>
+            <div class="deleteText">
+                Do you really want to delete your account?
+                It cannot be undone.
+            </div>
+            <button type="submit" name="submit">Confirm Delete</button>
+        </form>
+    </div>
+</body>
+</html>
